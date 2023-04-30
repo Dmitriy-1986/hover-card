@@ -1,0 +1,64 @@
+.container {
+    height: 400px;
+    width: 220px;
+    position: relative;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    height: 400px;
+    width: 200px;
+
+}
+
+.front {
+    color: #cccccc;
+    background-color: rgb(31, 31, 31);
+    transform: rotateY(0deg);
+}
+
+.front h2 { 
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+.front p {
+   
+    padding: 10px;
+}
+
+.back {    
+    padding: 10px;
+    background-color: blueviolet;
+    transform: rotateY(180deg);
+}
+
+.container:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.container:hover .back {
+    transform: rotateY(0deg);
+}
+
+.front-img {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.back p {
+    margin-bottom: 50px;
+}
+
+.back audio{
+    width: 200px;
+}
